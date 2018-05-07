@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>SmartSchool-Bringing Technology To The Lowest Level</title>
+  {% load staticfiles %}
+  <!-- CSS  -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col s12">
+      <nav>
+    <div class="nav-wrapper grey">
+      <a href="#" class="brand-logo">SmartSchool</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{% url 'school:register_school' %}"><span class="fa fa-users"></span>&nbsp;SmartTeacher</a></li>
+        <li><a href="#"><span class="fa fa-graduation-cap"></span>&nbsp;SmartPupil</a></li>
+         <li><a href="#" class="dropdown-trigger" data-target="parentdropdown"><span class="fa fa-users"></span>&nbsp;SmartParent</a>
+           <ul id="parentdropdown" class="dropdown-content">
+             <li><a href="">Register</a> </li>
+             <li><a href="">Request Results</a> </li>
+           </ul>
+         </li>
+
+         <li><a href="#"><span class="fa fa-bar-chart"></span>&nbsp;SmartExam</a></li>
+         <li><a href="#"><span class="fa fa-university"></span>&nbsp;SmartSchool</a></li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+
+  </div>
+  <!--This is the navigation bar-->
+  <div class="row">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div class="row">
+        <footer class="page-footer grey">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About SmartSchool</h5>
+          <p class="grey-text text-lighten-4">SmartSchool is a web application that is focused in ensuring
+          a distributed approach in the education sector.Our application ensures analysis of zonal,school and pupil results within the shortest
+          time possible.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Our Partners</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Safaricom</a></li>
+            <li><a class="white-text" href="#!">Airtel</a></li>
+            <li><a class="white-text" href="#!">KICD</a></li>
+            <li><a class="white-text" href="#!">Amnesty</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://web.facebook.com/hornafrictech/"><i class="fa fa-facebook-square"></i> </a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-twitter-square"></i></a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-google-plus-square"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Developed By <a class="orange-text text-lighten-3" href="" >HornAfricTech</a>
+      </div>
+    </div>
+  </footer>
+  </div>
+</div>
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  </body>
+</html>
